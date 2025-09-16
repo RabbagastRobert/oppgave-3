@@ -1,0 +1,14 @@
+/* GLOBAL STYLING */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LOCAL STYLING */
+
+/* Header */
+
+.headerNav,
+.headerNavList {
+  display: flex;
+}
