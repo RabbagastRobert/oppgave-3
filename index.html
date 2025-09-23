@@ -6,33 +6,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/satellite.png" />
   <script type="module" src="script.js"></script>
 </head>
 
 <body>
+
   <!-- HEADER -->
+
   <header>
     <!-- Navigation -->
     <img src="assets/nesa-logo.png" alt="logo" class="logo" />
     <nav class="headerNav">
       <ul class="headerNavList">
-        <li>New Horizons</li>
-        <li>Pioneer 11</li>
-        <li>Pioneer 10</li>
-        <li>Voyager 2</li>
-        <li>Voyager 1</li>
+        <a href="#newHorizons">
+          <li>New Horizons</li>
+        </a>
+        <a href="#pioneer11">
+          <li>Pioneer 11</li>
+        </a>
+        <a href="#pioneer10">
+          <li>Pioneer 10</li>
+        </a>
+        <a href="#voyager2">
+          <li>Voyager 2</li>
+        </a>
+        <a href="#voyager1">
+          <li>Voyager 1</li>
+        </a>
       </ul>
       <div id="hamburgerContainer">
         <img src="assets/menu-burger.png" alt="menu" id="hamburger" />
       </div>
     </nav>
   </header>
+
   <!-- MAIN -->
+
   <main>
     <section class="hero">
       <h1>The most distant objects made on Earth</h1>
       <img src="assets/launch.jpg" alt="Launch of New Horizons" />
     </section>
+
     <section class="article" id="newHorizons">
       <div class="articleContainer">
         <div class="articleText">
@@ -55,6 +71,7 @@
         </div>
       </div>
     </section>
+
     <section class="article" id="pioneer11">
       <div class="articleContainer">
         <div class="articleText">
@@ -77,6 +94,7 @@
         </div>
       </div>
     </section>
+
     <section class="article" id="pioneer10">
       <div class="articleContainer">
         <div class="articleText">
@@ -99,6 +117,7 @@
         </div>
       </div>
     </section>
+
     <section class="article" id="voyager2">
       <div class="articleContainer">
         <div class="articleText">
@@ -121,6 +140,7 @@
         </div>
       </div>
     </section>
+
     <section class="article" id="voyager1">
       <div class="articleContainer">
         <div class="articleText">
@@ -143,7 +163,9 @@
         </div>
       </div>
     </section>
+
   </main>
+
   <!-- FOOTER -->
   <footer>FOOTER CONTENT</footer>
 </body>
