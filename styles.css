@@ -61,6 +61,16 @@ section {
   gap: 2rem;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-secondary-color);
+  color: var(--bg-primary-color);
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
 /* LOCAL STYLING */
 
 /* Header */
@@ -188,6 +198,53 @@ section {
   text-align: right;
   font-size: smaller;
   width: 100%;
+}
+
+/* FOOTER */
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+}
+
+#fakeContacts {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  height: fit-content;
+  padding: 2rem;
+  transform: translate(-50%, 250%);
+  background-color: var(--bg-secondary-color);
+  color: #000000;
+  border: 2px solid #000000;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  display: none;
+  animation: slideInContacts 600ms ease-out 0ms normal forwards;
+  opacity: 0%;
+}
+
+#fakeContacts.active {
+  display: flex;
+}
+
+#closeFakeContacts {
+  align-self: flex-end;
+  margin: -1.5rem;
+}
+
+@keyframes slideInContacts {
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+  }
 }
 
 /* MOBILE LAYOUT */
