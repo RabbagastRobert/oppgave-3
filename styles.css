@@ -1,4 +1,9 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* VARIABLES */
+
 :root {
   --bg-primary-color: #ffffff;
   --bg-secondary-color: #8290B1;
@@ -16,6 +21,12 @@
   text-align: center;
   scroll-margin-top: 25vh;
   scroll-behavior: smooth;
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 a {
@@ -194,6 +205,9 @@ footer {
   height: 32px;
 }
 
+
+/* OTHER */
+
 #fakeContacts {
   display: none;
   gap: 1rem;
@@ -221,6 +235,26 @@ footer {
   margin: -1.5rem;
 }
 
+#scrollToTop {
+  position: fixed;
+  bottom: -5rem;
+  left: 2rem;
+  background-color: var(--button-bg-color);
+  padding: 0.5rem;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out, bottom 1s ease-in-out;
+}
+
+#scrollToTop.active {
+  bottom: 1rem;
+  opacity: 1;
+}
+
+#scrollToTop img {
+  filter: invert();
+}
+
 /* ANIMATIONS */
 
 @keyframes buttonHover {
@@ -234,6 +268,26 @@ footer {
   to {
     transform: translate(-50%, -50%);
     opacity: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
 

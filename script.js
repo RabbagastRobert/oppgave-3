@@ -10,6 +10,9 @@ const fakeLinks = document.querySelectorAll('.fakeLinks');
 const fakeContacts = document.getElementById('fakeContacts');
 const closeFakeContacts = document.getElementById('closeFakeContacts');
 
+// Scroll to top button
+const scrollToTop = document.getElementById('scrollToTop');
+
 ////////// EVENT LISTENERS
 
 // Records the time an element is set as visible so we can delay the removal of the element
@@ -44,5 +47,12 @@ window.addEventListener('click', (ev) => {
 // Close button for socials message box
 closeFakeContacts.addEventListener('click', () => fakeContacts.classList.remove('active'));
 
+// Scroll to top button visibility
+window.addEventListener('scroll', () => {
+    if (window.scrollY < window.innerHeight * 0.8) {
+        scrollToTop.classList.remove('active');
+    } else {
+        scrollToTop.classList.add('active');
+    }
 
-
+})
